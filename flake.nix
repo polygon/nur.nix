@@ -2,8 +2,8 @@
   description = "My personal NUR";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
-    oxalica.url = "github:oxalica/rust-overlay";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    oxalica.url = "github:oxalica/rust-overlay/stable";
   };
 
   outputs = { self, nixpkgs, oxalica }:

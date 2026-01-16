@@ -1,23 +1,23 @@
 { lib, rustPlatform, fetchCrate, rust-bin }:
 rustPlatform.buildRustPackage rec {
   pname = "wasm-server-runner";
-  version = "0.4.0";
+  version = "1.0.1";
 
   src = fetchCrate {
     inherit version pname;
-    sha256 = "sha256-u0464kCAqXEG5BuBgw20L5HF1Y6Rpba4OehkQ2vzUT0=";
+    hash = "sha256-3DrbhmlKRUm2qj8wyQl5wBG2dbd7RUPXm/hPNt6txnk=";
   };
 
   nativeBuildInputs = [
-    rust-bin.beta.latest.minimal
+    rust-bin.stable.latest.minimal
   ];
 
-  cargoSha256 = "sha256-VioGZSzxkePnp+S6R6EzqOcH9VfIa/zKTbjANiF4LZ8=";
+  cargoHash = "sha256-CBIqRIdYNFg1SP6Km4ypO0NhJGkQuxZrD1zOcRhUDdk=";
 
   meta = with lib; {
-    description = "Nix code formatter for nixpkgs";
-    homepage = "https://nix-community.github.io/nixpkgs-fmt";
-    license = licenses.asl20;
-    maintainers = with maintainers; [ zimbatm ];
+    description = "WASM Server runner";
+    homepage = "https://crates.io/crates/wasm-server-runner";
+    license = licenses.mit;
+    maintainers = with maintainers; [ polygon ];
   };
 }
